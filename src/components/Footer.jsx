@@ -5,7 +5,7 @@ export const Footer = () => {
    
     return (
         <footer className="bg-black font-Farro">
-            <ul className="flex items-center justify-between px-12 py-12 lg:justify-center lg:gap-20">
+            <ul className="flex items-center justify-between px-12 py-16 lg:justify-center lg:gap-20">
                 {redes.map(item => (
                     <li key={item.id} className="flex items-center justify-center">
                         <img src={item.icon} alt={`Icono de ${item.name}`} />
