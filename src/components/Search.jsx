@@ -1,4 +1,5 @@
 import { useFilteredResults } from '../hooks/useFilteredResults'
+import LazyImage from './LazyImage';
 
 export const Search = ({ filterType = 'both' }) => {
     const {
@@ -51,7 +52,7 @@ export const Search = ({ filterType = 'both' }) => {
                         <article key={agent.id}
                         className='flex flex-col items-center justify-center py-6'>
                             <div>
-                                <img src={agent.image} alt={`Imagen de ${agent.tittle}`} />
+                                <LazyImage src={agent.image} alt={agent.tittle} style={{ width: '100%' }} />
                             </div>
                             <div className='text-center flex flex-col justify-center items-center'>
                                 <h3 className='text-2xl'>
@@ -75,7 +76,7 @@ export const Search = ({ filterType = 'both' }) => {
                         <article key={map.id}
                         className='flex flex-col items-center justify-center py-6'>
                             <div>
-                                <img src={map.image} alt={`Imagen de ${map.name}`} />
+                               <LazyImage src={map.image} alt={map.name} style={{ width: '100%' }} />
                             </div>
                             <div className='text-center flex flex-col justify-center items-center'>
                                 <h3 className='text-2xl'>
