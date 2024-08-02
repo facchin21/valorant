@@ -7,7 +7,7 @@ export const Navbar = () => {
 
     return (
      <nav className='bg-black w-full px-4 md:px-12 flex flex-col md:flex-row justify-between items-center'>
-            <div className='flex flex-row items-center justify-center mb-4 md:mb-0 pb-4 md:pb-0 w-full'>
+            <div className='flex flex-row items-center justify-center mb-4 md:mb-0 pb-4 md:pb-0'>
                 <img src={imageRiot} alt="image logo Riot"/>
                 <img src={imageLogo} alt="Image logo Valorant"/>
             </div>
