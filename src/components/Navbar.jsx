@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom'
 export const Navbar = () => {
 
     return (
-        <nav className='bg-black w-full px-12 flex flex-row justify-between items-center'>
-            <div className='flex flex-row items-center justify-center'>
-                <img src={imageRiot} alt="image logo Riot"/>
-                <img src={imageLogo} alt="Image logo Valorant" />
+       <nav className='bg-black w-full px-4 md:px-12 flex flex-col md:flex-row justify-between items-center'>
+            <div className='flex flex-row items-center justify-center mb-4 md:mb-0'>
+                <img src={imageRiot} alt="image logo Riot" className='h-8 md:h-10' />
+                <img src={imageLogo} alt="Image logo Valorant" className='h-8 md:h-10 ml-2' />
             </div>
-            <ul className='font-Farro flex flex-row gap-2 items-center justify-center'>
+            <ul className='font-Farro flex flex-col md:flex-row gap-2 items-center justify-center'>
                 {items.map(item => (
                     <li key={item.id}>
                         <Link to={`/${item.link}`} 
-                        className='text-white transition-all duration-300 hover:text-red-500'>
+                            className='text-white transition-all duration-300 hover:text-red-500'>
                             {item.name}
                         </Link>
                     </li>
