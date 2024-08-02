@@ -1,6 +1,7 @@
 import { Search } from '../components/Search';
 import { useFilteredResults } from '../hooks/useFilteredResults';
 import { useMaps } from '../hooks/useMaps';
+import Article  from '../components/Article'
 export const Maps = () => {
     const {
         filteredMaps,
@@ -22,43 +23,11 @@ export const Maps = () => {
 
     return (
         <main className='flex flex-col items-center justify-center main__maps'>
-            <Search filterType="maps" />
-            <div className='container__maps gap-8'>
-                {search.length > 0 ? (
-                    filteredMaps.length > 0 ? (
-                        filteredMaps.map(map => (
-                            <article key={map.id} className='flex flex-col items-center justify-center py-6'>
-                                <div>
-                                    <img src={map.image} alt={`Imagen de ${map.name}`} />
-                                </div>
-                                <div className='text-center flex flex-col justify-center items-center'>
-                                    <h3 className='text-2xl'>
-                                        {map.name}
-                                    </h3>
-                                </div>
-                            </article>
-                        ))
-                    ) : (
-                        <div>No se encontraron mapas para la búsqueda.</div>
-                    )
-                ) : (
-                    <div className='font-Farro text-center py-12'>
-                        <h3 className='text-3xl'>Total de Mapas</h3>
-                        {maps.map(map => (
-                            <article key={map.id} className='flex flex-col items-center justify-center py-6'>
-                                <div>
-                                    <img src={map.image} alt={`Imagen de ${map.name}`} />
-                                </div>
-                                <div className='text-center flex flex-col justify-center items-center'>
-                                    <h3 className='text-2xl'>
-                                        {map.name}
-                                    </h3>
-                                </div>
-                            </article>
-                        ))}
-                    </div>
-                )}
-            </div>
-        </main>
+      <Search filterType="maps" />
+      <h3 className='py-4 text-3xl font-bold'>
+            Todos los Mapas
+      </h3>
+      <Article items={search.length > 0 ? filteredMaps : maps} type="maps" />
+    </main>
     );
 }
