@@ -23,12 +23,12 @@ Para instalar y ejecutar el proyecto en tu máquina local, sigue estos pasos:
 
 2. Navega al directorio del proyecto:
 ```bash
-cd valorant
+   cd valorant
 ```
 
 3. Instala las dependencias:
 ```bash
-npm install
+   npm install
 ```
 4. Ejecuta la aplicación:
    ```bash
